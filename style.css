@@ -1,0 +1,96 @@
+:root{
+  font-size: 62.5%;
+
+  --bg-color: #121214;
+
+  --base-primary-color: 194;
+  --base-secondary-color: 94;
+  --bg-primary-light: hsla(var(--base-primary-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-primary-color), 100%, 63%);
+  --secondary-color: hsl(var(--base-secondary-color), 100%, 63%);
+
+  --text-color: #FFF;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+main{
+  align-self: end;
+  justify-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+button:hover{
+  scale: 1.05;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path{
+  fill: var(--primary-color);
+}
+
+button svg{
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+.hide{
+  display: none;
+}
+
+.rest{
+  fill: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+#timer{
+  display: flex;
+
+  margin-bottom: 1.6rem;
+
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+}
+
+#controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3.2rem;
+
+  background-color: var(--bg-primary-light);
+  border-radius: 9999px;
+
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(5rem, 5rem + 10vw, 10.8rem);
+}
+
+footer{
+  align-self: end;
+  justify-self: end;
+
+  padding: 0 4rem 3.2rem 0;
+}
