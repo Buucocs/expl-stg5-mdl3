@@ -13,7 +13,7 @@ export function Timer({
   let initialFocusMinutes = minutesDisplay.innerText
   let initialRestMinutes = 10
   let focusMinutes 
-  let restMinutes
+  let restMinutes = initialRestMinutes
 
   
   function updateDisplay(minutes, seconds){
